@@ -4,8 +4,6 @@
   --dark: #373737;
   --body: 16px;
   --shadow: 0px 5px 25px rgba(0, 0, 0, 0.6);
-  --tablet: 768px;
-  --mobile: 480px;
 }
 
 * {
@@ -22,6 +20,7 @@ body {
   min-height: 100vh;
   background: var(--gradient);
   background-size: cover;
+  background-position: center center;
   padding: 20px;
 }
 
@@ -95,7 +94,6 @@ header p {
   background-color: var(--main);
   box-shadow: var(--shadow);
   border-radius: 5px;
-  overflow: hidden;
   padding: 20px;
 }
 .poke-info {
@@ -161,7 +159,17 @@ header p {
   font-size: var(--body);
 }
 
-@media only screen and (max-width: var(--tablet)) {
+@media only screen and (max-width: 768px) {
+  .abilities {
+    flex-direction: column;
+    align-items: center;
+  }
+  .abilities p {
+    margin: 5px 0px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .searchbar input {
     width: 300px;
   }
