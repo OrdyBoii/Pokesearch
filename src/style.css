@@ -1,0 +1,231 @@
+:root {
+  --gradient: linear-gradient(#0f2027, #203a43, #2c5364);
+  --main: #e73827;
+  --dark: #373737;
+  --body: 16px;
+  --shadow: 0px 5px 25px rgba(0, 0, 0, 0.6);
+  --tablet: 768px;
+  --mobile: 480px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 0.02em;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--gradient);
+  background-size: cover;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 20px;
+  max-width: 500px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+header img {
+  width: 25%;
+  height: auto;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: clamp(36px, 5vw, 48px);
+  color: var(--main);
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 18px;
+  max-width: clamp(500px, 5vw, 800px);
+  line-height: 1.6em;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.labels label {
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  margin-top: 10px;
+}
+.searchbar input {
+  border: none;
+  background: none;
+  font-size: var(--body);
+  color: grey;
+  width: 400px;
+  padding: 20px 10px;
+  margin-left: 10px;
+}
+.searchbar i {
+  color: grey;
+  margin-left: 20px;
+  align-self: center;
+}
+
+.pokesearch-results {
+  background-color: var(--main);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+}
+.poke-info {
+  background-color: lightslategray;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.poke-info p {
+  font-size: var(--body);
+  color: var(--dark);
+  font-weight: 700;
+}
+.poke-info p span {
+  font-weight: 500;
+}
+.shiny-check {
+  display: flex;
+  align-items: center;
+}
+.shiny-check label {
+  font-size: 16px;
+  color: var(--dark);
+  font-weight: 700;
+  margin-right: 10px;
+}
+.shiny-check input {
+  width: 20px;
+  height: 20px;
+}
+.poke-info img {
+  object-fit: contain;
+  flex-basis: 100%;
+  min-height: 300px;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.abilities {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+.abilties p {
+  font-size: var(--body);
+}
+
+.stats {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  color: whitesmoke;
+}
+.stats-left li,
+.stats-right li {
+  margin-bottom: 10px;
+  font-size: var(--body);
+}
+
+@media only screen and (max-width: var(--tablet)) {
+  .searchbar input {
+    width: 300px;
+  }
+}
+
+.error {
+  padding: 20px;
+  background-color: var(--main);
+  color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+.error img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.error h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+}
+.error p {
+  font-size: var(--body);
+}
+
+.loader-centered {
+  display: grid;
+  place-items: center;
+}
+.lds-ring {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

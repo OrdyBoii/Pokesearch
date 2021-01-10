@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="A simple web app to search for pokemon from gen 1 to gen 8" />
+    <meta name="keywords" content="Pokesearch, pokemon, web app, vanilla js, javascript, pokeAPI" />
+    <link rel="shortcut icon" href="./assets/favicon.ico?=v2" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>PokéSearch | A simple web app to search pokemon from Gen 1 to Gen 8</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./assets/pokedex.png" alt="pokedex" loading="lazy" />
+        <h1>PokéSearch</h1>
+        <p>Search any pokemon from Gen 1 to Gen 8.</p>
+        <form>
+          <div class="labels">
+            <label for="search">Search Pokédex:</label>
+          </div>
+          <div class="searchbar">
+            <i class="fas fa-search"></i>
+            <input type="search" name="search" id="search" placeholder="Enter a pokemon name..." />
+          </div>
+        </form>
+      </header>
+      <main></main>
+    </div>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>
